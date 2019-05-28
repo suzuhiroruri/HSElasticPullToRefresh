@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Danil Gontovnik
+Copyright (c) 2019 Hiromasa Suzuki
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,41 +35,41 @@ public extension NSObject {
     // MARK: -
     // MARK: Vars
     
-    fileprivate struct dg_associatedKeys {
+    fileprivate struct hs_associatedKeys {
         static var observersArray = "observers"
     }
     
-    fileprivate var dg_observers: [[String : NSObject]] {
+    fileprivate var hs_observers: [[String : NSObject]] {
         get {
-            if let observers = objc_getAssociatedObject(self, &dg_associatedKeys.observersArray) as? [[String : NSObject]] {
+            if let observers = objc_getAssociatedObject(self, &hs_associatedKeys.observersArray) as? [[String : NSObject]] {
                 return observers
             } else {
                 let observers = [[String : NSObject]]()
-                self.dg_observers = observers
+                self.hs_observers = observers
                 return observers
             }
         } set {
-            objc_setAssociatedObject(self, &dg_associatedKeys.observersArray, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &hs_associatedKeys.observersArray, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
     // MARK: -
     // MARK: Methods
     
-    public func dg_addObserver(_ observer: NSObject, forKeyPath keyPath: String) {
+    func hs_addObserver(_ observer: NSObject, forKeyPath keyPath: String) {
         let observerInfo = [keyPath : observer]
         
-        if dg_observers.index(where: { $0 == observerInfo }) == nil {
-            dg_observers.append(observerInfo)
+        if hs_observers.firstIndex(where: { $0 == observerInfo }) == nil {
+            hs_observers.append(observerInfo)
             addObserver(observer, forKeyPath: keyPath, options: .new, context: nil)
         }
     }
     
-    public func dg_removeObserver(_ observer: NSObject, forKeyPath keyPath: String) {
+    func hs_removeObserver(_ observer: NSObject, forKeyPath keyPath: String) {
         let observerInfo = [keyPath : observer]
         
-        if let index = dg_observers.index(where: { $0 == observerInfo}) {
-            dg_observers.remove(at: index)
+        if let index = hs_observers.firstIndex(where: { $0 == observerInfo}) {
+            hs_observers.remove(at: index)
             removeObserver(observer, forKeyPath: keyPath)
         }
     }
@@ -83,27 +83,27 @@ public extension UIScrollView {
     
     // MARK: - Vars
 
-    fileprivate struct dg_associatedKeys {
+    fileprivate struct hs_associatedKeys {
         static var pullToRefreshView = "pullToRefreshView"
     }
 
-    fileprivate var pullToRefreshView: DGElasticPullToRefreshView? {
+    fileprivate var pullToRefreshView: HSElasticPullToRefreshView? {
         get {
-            return objc_getAssociatedObject(self, &dg_associatedKeys.pullToRefreshView) as? DGElasticPullToRefreshView
+            return objc_getAssociatedObject(self, &hs_associatedKeys.pullToRefreshView) as? HSElasticPullToRefreshView
         }
 
         set {
-            objc_setAssociatedObject(self, &dg_associatedKeys.pullToRefreshView, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &hs_associatedKeys.pullToRefreshView, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
     // MARK: - Methods (Public)
     
-    public func dg_addPullToRefreshWithActionHandler(_ actionHandler: @escaping () -> Void, loadingView: DGElasticPullToRefreshLoadingView?) {
+    func hs_addPullToRefreshWithActionHandler(_ actionHandler: @escaping () -> Void, loadingView: HSElasticPullToRefreshLoadingView?) {
         isMultipleTouchEnabled = false
         panGestureRecognizer.maximumNumberOfTouches = 1
 
-        let pullToRefreshView = DGElasticPullToRefreshView()
+        let pullToRefreshView = HSElasticPullToRefreshView()
         self.pullToRefreshView = pullToRefreshView
         pullToRefreshView.actionHandler = actionHandler
         pullToRefreshView.loadingView = loadingView
@@ -112,21 +112,21 @@ public extension UIScrollView {
         pullToRefreshView.observing = true
     }
     
-    public func dg_removePullToRefresh() {
+    func hs_removePullToRefresh() {
         pullToRefreshView?.disassociateDisplayLink()
         pullToRefreshView?.observing = false
         pullToRefreshView?.removeFromSuperview()
     }
     
-    public func dg_setPullToRefreshBackgroundColor(_ color: UIColor) {
+    func hs_setPullToRefreshBackgroundColor(_ color: UIColor) {
         pullToRefreshView?.backgroundColor = color
     }
     
-    public func dg_setPullToRefreshFillColor(_ color: UIColor) {
+    func hs_setPullToRefreshFillColor(_ color: UIColor) {
         pullToRefreshView?.fillColor = color
     }
     
-    public func dg_stopLoading() {
+    func hs_stopLoading() {
         pullToRefreshView?.stopLoading()
     }
 }
@@ -135,7 +135,7 @@ public extension UIScrollView {
 // MARK: (UIView) Extension
 
 public extension UIView {
-    func dg_center(_ usePresentationLayerIfPossible: Bool) -> CGPoint {
+    func hs_center(_ usePresentationLayerIfPossible: Bool) -> CGPoint {
         if usePresentationLayerIfPossible, let presentationLayer = layer.presentation() {
             // Position can be used as a center, because anchorPoint is (0.5, 0.5)
             return presentationLayer.position
@@ -148,7 +148,7 @@ public extension UIView {
 // MARK: (UIPanGestureRecognizer) Extension
 
 public extension UIPanGestureRecognizer {
-    func dg_resign() {
+    func hs_resign() {
         isEnabled = false
         isEnabled = true
     }
@@ -157,8 +157,8 @@ public extension UIPanGestureRecognizer {
 // MARK: -
 // MARK: (UIGestureRecognizerState) Extension
 
-public extension UIGestureRecognizerState {
-    func dg_isAnyOf(_ values: [UIGestureRecognizerState]) -> Bool {
+public extension UIGestureRecognizer.State {
+    func hs_isAnyOf(_ values: [UIGestureRecognizer.State]) -> Bool {
         return values.contains(where: { $0 == self })
     }
 }

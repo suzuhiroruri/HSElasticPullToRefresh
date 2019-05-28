@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Danil Gontovnik
+Copyright (c) 2019 Hiromasa Suzuki
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,20 +31,20 @@ import UIKit
 
 public extension CGFloat {
     
-    public func toRadians() -> CGFloat {
-        return (self * CGFloat(M_PI)) / 180.0
+    func toRadians() -> CGFloat {
+        return (self * CGFloat(CGFloat.pi)) / 180.0
     }
     
-    public func toDegrees() -> CGFloat {
-        return self * 180.0 / CGFloat(M_PI)
+    func toDegrees() -> CGFloat {
+        return self * 180.0 / CGFloat(CGFloat.pi)
     }
     
 }
 
 // MARK: -
-// MARK: DGElasticPullToRefreshLoadingViewCircle
+// MARK: HSElasticPullToRefreshLoadingViewCircle
 
-open class DGElasticPullToRefreshLoadingViewCircle: DGElasticPullToRefreshLoadingView {
+open class HSElasticPullToRefreshLoadingViewCircle: HSElasticPullToRefreshLoadingView {
     
     // MARK: -
     // MARK: Vars
@@ -99,11 +99,11 @@ open class DGElasticPullToRefreshLoadingViewCircle: DGElasticPullToRefreshLoadin
         if shapeLayer.animation(forKey: kRotationAnimation) != nil { return }
         
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotationAnimation.toValue = CGFloat(2 * M_PI) + currentDegree()
+        rotationAnimation.toValue = CGFloat(2 * CGFloat.pi) + currentDegree()
         rotationAnimation.duration = 1.0
         rotationAnimation.repeatCount = Float.infinity
         rotationAnimation.isRemovedOnCompletion = false
-        rotationAnimation.fillMode = kCAFillModeForwards
+        rotationAnimation.fillMode = CAMediaTimingFillMode.forwards
         shapeLayer.add(rotationAnimation, forKey: kRotationAnimation)
     }
     

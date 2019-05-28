@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  DGElasticPullToRefreshExample
+//  HSElasticPullToRefreshExample
 //
-//  Created by Danil Gontovnik on 10/2/15.
-//  Copyright © 2015 Danil Gontovnik. All rights reserved.
+//  Created by Hiromasa Suzuki on 2019/05/28.
+//  Copyright © 2019 Hiromasa Suzuki. All rights reserved.
 //
 
 import UIKit

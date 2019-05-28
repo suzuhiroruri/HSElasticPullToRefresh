@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Danil Gontovnik
+Copyright (c) 2019 Hiromasa Suzuki
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ SOFTWARE.
 
 import UIKit
 
-open class DGElasticPullToRefreshLoadingView: UIView {
+open class HSElasticPullToRefreshLoadingView: UIView {
     
     // MARK: -
     // MARK: Vars

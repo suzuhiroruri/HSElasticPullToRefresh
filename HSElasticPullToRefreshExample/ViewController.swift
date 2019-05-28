@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  DGElasticPullToRefreshExample
+//  HSElasticPullToRefreshExample
 //
-//  Created by Danil Gontovnik on 10/2/15.
-//  Copyright © 2015 Danil Gontovnik. All rights reserved.
+//  Created by Hiromasa Suzuki on 2019/05/28.
+//  Copyright © 2019 Hiromasa Suzuki. All rights reserved.
 //
 
 import UIKit
@@ -33,19 +33,19 @@ class ViewController: UIViewController {
         tableView.backgroundColor = UIColor(red: 250/255.0, green: 250/255.0, blue: 251/255.0, alpha: 1.0)
         view.addSubview(tableView)
         
-        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        let loadingView = HSElasticPullToRefreshLoadingViewCircle()
         loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
-        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+        tableView.hs_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
-                self?.tableView.dg_stopLoading()
+                self?.tableView.hs_stopLoading()
             })
         }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
-        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        tableView.hs_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        tableView.hs_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
     }
     
     deinit {
-        tableView.dg_removePullToRefresh()
+        tableView.hs_removePullToRefresh()
     }
     
 }

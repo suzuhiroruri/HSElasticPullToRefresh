@@ -25,7 +25,7 @@
 		05B92F891BD25E7B006D60FB /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
 		05B92F8A1BD25E7B006D60FB /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		05B92F8B1BD25E7B006D60FB /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
-		05CD14651BBE8FEA00AF4030 /* DGElasticPullToRefreshExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGElasticPullToRefreshExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CD14651BBE8FEA00AF4030 /* HSElasticPullToRefreshExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSElasticPullToRefreshExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CD14681BBE8FEA00AF4030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CD146A1BBE8FEA00AF4030 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05CD146F1BBE8FEA00AF4030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05B92F861BD25E7B006D60FB /* DGElasticPullToRefresh */ = {
+		05B92F861BD25E7B006D60FB /* HSElasticPullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
 				05B92F871BD25E7B006D60FB /* DGElasticPullToRefreshConstants.swift */,
@@ -54,13 +54,13 @@
 				05B92F8A1BD25E7B006D60FB /* DGElasticPullToRefreshLoadingViewCircle.swift */,
 				05B92F8B1BD25E7B006D60FB /* DGElasticPullToRefreshView.swift */,
 			);
-			path = DGElasticPullToRefresh;
+			path = HSElasticPullToRefresh;
 			sourceTree = SOURCE_ROOT;
 		};
 		05CD145C1BBE8FEA00AF4030 = {
 			isa = PBXGroup;
 			children = (
-				05CD14671BBE8FEA00AF4030 /* DGElasticPullToRefreshExample */,
+				05CD14671BBE8FEA00AF4030 /* HSElasticPullToRefreshExample */,
 				05CD14661BBE8FEA00AF4030 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,15 +68,15 @@
 		05CD14661BBE8FEA00AF4030 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05CD14651BBE8FEA00AF4030 /* DGElasticPullToRefreshExample.app */,
+				05CD14651BBE8FEA00AF4030 /* HSElasticPullToRefreshExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05CD14671BBE8FEA00AF4030 /* DGElasticPullToRefreshExample */ = {
+		05CD14671BBE8FEA00AF4030 /* HSElasticPullToRefreshExample */ = {
 			isa = PBXGroup;
 			children = (
-				05B92F861BD25E7B006D60FB /* DGElasticPullToRefresh */,
+				05B92F861BD25E7B006D60FB /* HSElasticPullToRefresh */,
 				05CD14681BBE8FEA00AF4030 /* AppDelegate.swift */,
 				05CD146A1BBE8FEA00AF4030 /* ViewController.swift */,
 				05FAB8BD1BBEF115004922F1 /* NavigationController.swift */,
@@ -84,15 +84,15 @@
 				05CD14711BBE8FEA00AF4030 /* LaunchScreen.storyboard */,
 				05CD14741BBE8FEA00AF4030 /* Info.plist */,
 			);
-			path = DGElasticPullToRefreshExample;
+			path = HSElasticPullToRefreshExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05CD14641BBE8FEA00AF4030 /* DGElasticPullToRefreshExample */ = {
+		05CD14641BBE8FEA00AF4030 /* HSElasticPullToRefreshExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05CD14771BBE8FEA00AF4030 /* Build configuration list for PBXNativeTarget "DGElasticPullToRefreshExample" */;
+			buildConfigurationList = 05CD14771BBE8FEA00AF4030 /* Build configuration list for PBXNativeTarget "HSElasticPullToRefreshExample" */;
 			buildPhases = (
 				05CD14611BBE8FEA00AF4030 /* Sources */,
 				05CD14621BBE8FEA00AF4030 /* Frameworks */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = DGElasticPullToRefreshExample;
+			name = HSElasticPullToRefreshExample;
 			productName = DGElasticPullToRefreshExample;
-			productReference = 05CD14651BBE8FEA00AF4030 /* DGElasticPullToRefreshExample.app */;
+			productReference = 05CD14651BBE8FEA00AF4030 /* HSElasticPullToRefreshExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,18 +113,19 @@
 		05CD145D1BBE8FEA00AF4030 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Danil Gontovnik";
 				TargetAttributes = {
 					05CD14641BBE8FEA00AF4030 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 9JMCJCA8J2;
 						LastSwiftMigration = 0800;
 					};
 				};
 			};
-			buildConfigurationList = 05CD14601BBE8FEA00AF4030 /* Build configuration list for PBXProject "DGElasticPullToRefreshExample" */;
+			buildConfigurationList = 05CD14601BBE8FEA00AF4030 /* Build configuration list for PBXProject "HSElasticPullToRefreshExample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -135,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05CD14641BBE8FEA00AF4030 /* DGElasticPullToRefreshExample */,
+				05CD14641BBE8FEA00AF4030 /* HSElasticPullToRefreshExample */,
 			);
 		};
 /* End PBXProject section */
@@ -186,17 +187,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -231,17 +243,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -260,6 +283,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -269,12 +293,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DGElasticPullToRefreshExample/Info.plist;
+				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				INFOPLIST_FILE = "$(SRCROOT)/HSElasticPullToRefreshExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gatafan.DGElasticPullToRefreshExample;
-				PRODUCT_NAME = DGElasticPullToRefreshExample;
-				SWIFT_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suzuhiro.HSElasticPullToRefreshExample;
+				PRODUCT_NAME = HSElasticPullToRefreshExample;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -282,19 +307,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DGElasticPullToRefreshExample/Info.plist;
+				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				INFOPLIST_FILE = "$(SRCROOT)/HSElasticPullToRefreshExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gatafan.DGElasticPullToRefreshExample;
-				PRODUCT_NAME = DGElasticPullToRefreshExample;
-				SWIFT_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suzuhiro.HSElasticPullToRefreshExample;
+				PRODUCT_NAME = HSElasticPullToRefreshExample;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05CD14601BBE8FEA00AF4030 /* Build configuration list for PBXProject "DGElasticPullToRefreshExample" */ = {
+		05CD14601BBE8FEA00AF4030 /* Build configuration list for PBXProject "HSElasticPullToRefreshExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05CD14751BBE8FEA00AF4030 /* Debug */,
@@ -303,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05CD14771BBE8FEA00AF4030 /* Build configuration list for PBXNativeTarget "DGElasticPullToRefreshExample" */ = {
+		05CD14771BBE8FEA00AF4030 /* Build configuration list for PBXNativeTarget "HSElasticPullToRefreshExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05CD14781BBE8FEA00AF4030 /* Debug */,
