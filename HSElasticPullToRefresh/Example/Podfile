@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'HSElasticPullToRefresh_Example' do
+  pod 'HSElasticPullToRefresh', :path => '../'
+end

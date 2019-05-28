@@ -1,0 +1,16 @@
+PODS:
+  - HSElasticPullToRefresh (0.1.0)
+
+DEPENDENCIES:
+  - HSElasticPullToRefresh (from `../`)
+
+EXTERNAL SOURCES:
+  HSElasticPullToRefresh:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HSElasticPullToRefresh: 2adef11309827d03482207b8be5c6d07b35795da
+
+PODFILE CHECKSUM: e42654fc56c712331bd54f6ab981bb9ee7b6a01f
+
+COCOAPODS: 1.7.0
